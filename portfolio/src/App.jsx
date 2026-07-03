@@ -156,6 +156,7 @@ function App() {
                 <span className="terminal-prompt">$ whoami</span>
                 <h1 className="hero-name">Pranesh Karthi M S</h1>
                 <p className="hero-title">Fullstack + DevOps Engineer</p>
+                <p className="hero-title">Aspiring to build real products that is ready for the world..,</p>
                 <p className="hero-desc">
                   Building scalable, high-performance software — from backend
                   services to mobile apps and cloud deployments.
