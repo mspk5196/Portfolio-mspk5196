@@ -8,10 +8,22 @@ const skills = {
   "Backend": ["Node.js", "Express.js", "REST APIs", "JWT", "OAuth"],
   "Databases & Caching": ["PostgreSQL", "MySQL", "Firebase", "Redis"],
   "DevOps & Cloud": ["Docker", "Linux", "Nginx", "Cloudflare Tunnel", "Jenkins", "Grafana"],
-  "Integrations": ["Razorpay", "SMTP Email"],
+  "Integrations": ["Razorpay", "SMTP Email", ""],
+  "AI/LLM" : ["RAG", "Vector Embeddings", "Semantic Search","Prompt Engineering","LLM Tool Calling","OpenRouter","DeepSeek R1",]
 }
 
 const projects = [
+  {
+    title: "Administrative Institute Management System for schools",
+    link: null,
+    tags: ["React", "Node.js", "MySQL", "Zustand", "Socket.io", "AI Integration"],
+    bullets: [
+      "Engineered end-to-end student lifecycle management including admissions, profiles, documents, and grade promotions",
+      "Built integrated fee collection architecture with dynamic structure mapping, automated ledgers, and secure payment processing",
+      "Implemented structured bulk data pipelines using ExcelJS to import, validate, and onboard large volumes of student records",
+      "AI-powered ERP Assistant using Retrieval-Augmented Generation (RAG), dynamic SQL generation, semantic search, and tool-calling for database queries, knowledge retrieval, and backend code understanding.",
+    ],
+  },
   {
     title: "Authentication-as-a-Service",
     link: "https://authservices.mspkapps.in/",
@@ -26,12 +38,13 @@ const projects = [
   {
     title: "Academic Management System",
     link: null,
-    tags: ["React", "Node.js", "Express", "MySQL"],
+    tags: ["React Native", "Node.js", "Express", "MySQL", "Socket.io", "In-Built chat"],
     bullets: [
       "Role-based platform for students, mentors, and coordinators",
       "REST APIs for attendance, performance & workflow tracking",
       "React dashboards for academic & admin operations",
       "Deployed on cloud infrastructure",
+      "In-Built chat for students, mentors, coordinators and admin",
     ],
   },
   {
