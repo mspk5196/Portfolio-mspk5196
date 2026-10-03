@@ -37,12 +37,10 @@ export default function Contact() {
 
         <div className="contact-meta-cards">
           <div className="contact-meta-card">
-            <span className="meta-card-icon">📞</span>
+            <span className="meta-card-icon">⚡</span>
             <div>
-              <span className="meta-card-label">Direct Phone</span>
-              <a href={`tel:${meta.phone.replace(/\s+/g, '')}`} className="meta-card-value">
-                {meta.phone}
-              </a>
+              <span className="meta-card-label">Availability</span>
+              <span className="meta-card-value">Open to Roles</span>
             </div>
           </div>
           <div className="contact-meta-card">

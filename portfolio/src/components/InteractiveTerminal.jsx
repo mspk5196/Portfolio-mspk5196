@@ -50,7 +50,7 @@ export default function InteractiveTerminal() {
       case 'contact':
         newHistory.push({
           type: 'output',
-          text: `Email:    ${meta.email}\nPhone:    ${meta.phone}\nLinkedIn: ${meta.linkedin}\nGitHub:   ${meta.github}\nWeb:      ${meta.website}`,
+          text: `Email:    ${meta.email}\nLinkedIn: ${meta.linkedin}\nGitHub:   ${meta.github}\nWeb:      ${meta.website}`,
         })
         break
       case 'clear':

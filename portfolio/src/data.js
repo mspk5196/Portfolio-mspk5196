@@ -8,7 +8,6 @@ export const meta = {
   tagline2:    'Multi-Tenant Architecture · System Design · Fullstack & DevOps',
   summary:     'Pre-final year Artificial Intelligence and Data Science undergraduate with hands-on experience building and deploying production systems. Independently built 4 production systems, including a multi-tenant task management platform handling 128,000+ daily API calls for 347 users across 3 organizations, and a self-published authentication-as-a-service npm package powering SSO for multiple production applications. Proficient in Node.js, React, React Native, PostgreSQL/MySQL, Docker, and Jenkins CI/CD, with experience in system design, RBAC/ACL security, and multi-tenant architecture.',
   location:    'Erode, Tamil Nadu, India',
-  phone:       '+91 82704 26785',
   email:       'praneshkarthims@gmail.com',
   secondaryEmail: 'mspk@mspk.in',
   github:      'https://github.com/mspk5196',
