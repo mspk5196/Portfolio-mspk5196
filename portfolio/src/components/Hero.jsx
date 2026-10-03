@@ -143,21 +143,17 @@ export default function Hero() {
           </div>
 
           <div className="hero-socials">
-            <a href={meta.github}   target="_blank" rel="noopener noreferrer" className="hero-social" aria-label="GitHub">
-              <GithubIcon size={18} />
-              <span>GitHub</span>
+            <a href={meta.github} target="_blank" rel="noopener noreferrer" className="hero-social-icon-btn" aria-label="GitHub" title="GitHub">
+              <GithubIcon size={20} />
             </a>
-            <a href={meta.linkedin} target="_blank" rel="noopener noreferrer" className="hero-social" aria-label="LinkedIn">
-              <LinkedinIcon size={18} />
-              <span>LinkedIn</span>
+            <a href={meta.linkedin} target="_blank" rel="noopener noreferrer" className="hero-social-icon-btn" aria-label="LinkedIn" title="LinkedIn">
+              <LinkedinIcon size={20} />
             </a>
-            <a href={meta.website}  target="_blank" rel="noopener noreferrer" className="hero-social" aria-label="Website">
-              <WebsiteIcon size={18} />
-              <span>Website</span>
+            <a href={meta.website} target="_blank" rel="noopener noreferrer" className="hero-social-icon-btn" aria-label="Website" title="Website">
+              <WebsiteIcon size={20} />
             </a>
-            <a href={`mailto:${meta.email}`} className="hero-social" aria-label="Email">
-              <MailIcon size={18} />
-              <span>Email</span>
+            <a href={`mailto:${meta.email}`} className="hero-social-icon-btn" aria-label="Email" title="Email">
+              <MailIcon size={20} />
             </a>
           </div>
         </div>

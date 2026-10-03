@@ -65,19 +65,19 @@ export default function Contact() {
 
         <div className="contact-socials">
           <a href={meta.github} target="_blank" rel="noopener noreferrer" className="c-social" aria-label="GitHub">
-            <GithubIcon size={20} />
+            <GithubIcon size={18} />
             <span>GitHub</span>
           </a>
           <a href={meta.linkedin} target="_blank" rel="noopener noreferrer" className="c-social" aria-label="LinkedIn">
-            <LinkedinIcon size={20} />
+            <LinkedinIcon size={18} />
             <span>LinkedIn</span>
           </a>
           <a href={meta.website} target="_blank" rel="noopener noreferrer" className="c-social" aria-label="Website">
-            <WebsiteIcon size={20} />
+            <WebsiteIcon size={18} />
             <span>mspk.in</span>
           </a>
           <a href={`mailto:${meta.email}`} className="c-social" aria-label="Email">
-            <MailIcon size={20} />
+            <MailIcon size={18} />
             <span>Email</span>
           </a>
         </div>

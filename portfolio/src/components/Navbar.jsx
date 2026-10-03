@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import profileImg from '../assets/MSPK_APPS_LOGO.png'
 import { meta } from '../data'
 import { GithubIcon, LinkedinIcon } from './icons'
 
@@ -36,7 +37,9 @@ export default function Navbar({ theme, toggleTheme }) {
       <div className="navbar-inner">
         {/* Brand */}
         <a href="#hero" className="navbar-brand" onClick={close}>
-          <span className="navbar-logo">MSPK</span>
+          <div className="navbar-logo-wrap">
+            <img src={profileImg} alt={meta.name} className="navbar-logo-img" />
+          </div>
           <span className="navbar-name">{meta.name.split(' ').slice(0, 2).join(' ')}</span>
         </a>
 

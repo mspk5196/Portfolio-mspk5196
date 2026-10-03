@@ -7,7 +7,8 @@ export default function InteractiveTerminal() {
     { type: 'system', text: 'Type "help" or click one of the quick commands below.' },
   ])
   const [inputVal, setInputVal] = useState('')
-  const terminalEndRef = useRef(null)
+  const terminalBodyRef = useRef(null)
+  const isInitialMount = useRef(true)
 
   const handleCommand = (cmd) => {
     const clean = cmd.trim().toLowerCase()
@@ -72,7 +73,13 @@ export default function InteractiveTerminal() {
   }
 
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+    if (isInitialMount.current) {
+      isInitialMount.current = false
+      return
+    }
+    if (terminalBodyRef.current) {
+      terminalBodyRef.current.scrollTop = terminalBodyRef.current.scrollHeight
+    }
   }, [history])
 
   return (
@@ -98,7 +105,7 @@ export default function InteractiveTerminal() {
             <button className="terminal-clear-btn" onClick={() => setHistory([])}>clear</button>
           </div>
 
-          <div className="terminal-body">
+          <div className="terminal-body" ref={terminalBodyRef}>
             {history.map((item, i) => (
               <div key={i} className={`terminal-line ${item.type}`}>
                 {item.type === 'user' ? (
@@ -108,7 +115,6 @@ export default function InteractiveTerminal() {
                 )}
               </div>
             ))}
-            <div ref={terminalEndRef} />
           </div>
 
           <form className="terminal-input-row" onSubmit={handleSubmit}>

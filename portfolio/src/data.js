@@ -21,7 +21,7 @@ export const meta = {
 
 export const stats = [
   { value: '128K+', label: 'Daily API Calls' },
-  { value: '2,315+', label: 'Students Managed (ERP)' },
+  { value: '2,315+', label: 'Students + Staff Managed' },
   { value: '₹1.74 Cr+', label: 'Fee Transactions' },
   { value: '4', label: 'Production Systems' },
 ]
@@ -98,13 +98,13 @@ export const projects = [
     featured: true,
     category: 'Client Platform / Administration & Finance',
     title: 'School ERP Platform',
-    subtitle: 'Complete institutional ERP serving 2,315 active students with automated ₹1.74 Cr+ payments',
+    subtitle: 'Complete institutional ERP serving 2,315 active students & staff with automated ₹1.74 Cr+ payments',
     period: 'Mar 2026 – Jun 2026',
     client: 'Secondary School Administration',
     link: null,
     status: 'Production Deployed',
     tags: ['React 19', 'Express 5', 'Sequelize', 'MySQL', 'Socket.io', 'Razorpay', 'Docker', 'Nginx'],
-    metrics: ['2,315 Active Students (Grades 1–12)', '₹1.74 Cr+ Tracked Fees Automated', '1,590+ Tracked Staff Audit Actions', '4 User Tiers RBAC'],
+    metrics: ['2,315 Active Students & Staff (Grades 1–12)', '₹1.74 Cr+ Tracked Fees Automated', '1,590+ Tracked Staff Audit Actions', '4 User Tiers RBAC'],
     bullets: [
       'Constructed a school administration ERP over a 4-month cycle, serving 2,315 active students across grades 1–12.',
       'Automated dues calculation and receipts via Razorpay, eliminating manual reconciliation for ₹1.74 Cr+ in tracked fees.',
@@ -138,15 +138,15 @@ export const projects = [
   {
     id: 4,
     key: 'auth-service',
-    featured: false,
-    category: 'Personal / Infrastructure Package',
-    title: 'Authentication-as-a-Service',
-    subtitle: 'Self-published npm package & SSO auth service powering production applications',
-    period: 'Nov 2025 – Jan 2026',
+    featured: true,
+    category: 'Production Platform / Authentication Infrastructure',
+    title: 'Authentication-as-a-Service Platform',
+    subtitle: 'Self-published npm package & SSO auth service in production powering multi-tenant applications',
+    period: 'Nov 2025 – Present (Production)',
     link: 'https://authservices.mspkapps.in',
-    status: 'Production & Maintained',
+    status: 'Production (Live)',
     tags: ['npm Package', 'JWT', 'Google OAuth 2.0', 'Redis', 'Docker', 'Nginx', 'Cloudflare Tunnel', 'Jenkins CI/CD'],
-    metrics: ['Public npm Package', 'Powers 3 Self-Built Apps', '30–40 Active Users', 'One-Command Release Pipeline'],
+    metrics: ['Public npm Package', 'Powers 3 Production Apps', '30–40 Active Users', 'One-Command Release Pipeline'],
     bullets: [
       'Published an Authentication-as-a-Service platform as a public npm package, in production since January 2026 across 3 self-built applications.',
       'Integrated JWT authentication, Google OAuth 2.0 SSO, and Redis session caching for 30–40 active users.',
