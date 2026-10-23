@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import profileImg from '../assets/MSPK_APPS_LOGO.png'
+import profileImg from '../assets/Photo1.jpg'
 import { meta } from '../data'
 import { GithubIcon, LinkedinIcon, WebsiteIcon, MailIcon } from './icons'
 
