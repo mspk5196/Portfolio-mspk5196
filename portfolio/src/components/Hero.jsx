@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import profileImg from '../assets/Photo1.jpg'
+import resumePdf from '../assets/PRANESH KARTHI M S.pdf'
 import { meta } from '../data'
-import { GithubIcon, LinkedinIcon, WebsiteIcon, MailIcon } from './icons'
+import { GithubIcon, LinkedinIcon, WebsiteIcon, MailIcon, DownloadIcon } from './icons'
 
 export default function Hero() {
   const canvasRef = useRef(null)
@@ -150,6 +151,16 @@ export default function Hero() {
 
           <div className="hero-actions">
             <a href="#projects" className="btn-primary">View My Work</a>
+            <a
+              href={resumePdf}
+              download="PRANESH_KARTHI_M_S_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-resume"
+            >
+              <DownloadIcon size={16} />
+              <span>Resume</span>
+            </a>
             <a href={`mailto:${meta.email}`} className="btn-ghost">Get In Touch</a>
           </div>
 

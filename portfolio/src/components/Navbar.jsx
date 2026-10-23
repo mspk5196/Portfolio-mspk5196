@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import profileImg from '../assets/MSPK_APPS_LOGO.png'
+import resumePdf from '../assets/PRANESH KARTHI M S.pdf'
 import { meta } from '../data'
-import { GithubIcon, LinkedinIcon } from './icons'
+import { GithubIcon, LinkedinIcon, DownloadIcon } from './icons'
 
 const SunIcon = () => (
   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -63,6 +64,17 @@ export default function Navbar({ theme, toggleTheme }) {
               <LinkedinIcon size={16} />
             </a>
           </div>
+          <a
+            href={resumePdf}
+            download="PRANESH_KARTHI_M_S_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-resume-btn"
+            title="Download Resume"
+          >
+            <DownloadIcon size={14} />
+            <span>Resume</span>
+          </a>
           <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
             {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
           </button>
@@ -84,6 +96,16 @@ export default function Navbar({ theme, toggleTheme }) {
         <a href="#education" className="mobile-link" onClick={close}>Education</a>
         <a href="#terminal" className="mobile-link" onClick={close}>Interactive Terminal</a>
         <a href="#contact" className="mobile-link" onClick={close}>Contact</a>
+        <a
+          href={resumePdf}
+          download="PRANESH_KARTHI_M_S_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mobile-link resume-mobile"
+          onClick={close}
+        >
+          📄 Download Resume (PDF)
+        </a>
         <a href={`mailto:${meta.email}`} className="mobile-cta" onClick={close}>Get in Touch →</a>
       </div>
     </nav>

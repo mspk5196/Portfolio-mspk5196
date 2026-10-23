@@ -1,4 +1,5 @@
 import profileImg from '../assets/MSPK_APPS_LOGO.png'
+import resumePdf from '../assets/PRANESH KARTHI M S.pdf'
 import { meta } from '../data'
 import { GithubIcon, LinkedinIcon, WebsiteIcon, MailIcon } from './icons'
 
@@ -97,6 +98,10 @@ export default function Footer() {
             <a href={meta.linkedin} target="_blank" rel="noopener noreferrer" className="f-link ext">
               <span>LinkedIn Profile</span>
               <span className="f-ext-arrow">↗</span>
+            </a>
+            <a href={resumePdf} download="PRANESH_KARTHI_M_S_Resume.pdf" target="_blank" rel="noopener noreferrer" className="f-link ext">
+              <span>Download Resume</span>
+              <span className="f-ext-arrow">↓</span>
             </a>
           </div>
         </div>
