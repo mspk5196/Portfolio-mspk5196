@@ -81,14 +81,24 @@ export default function Hero() {
     }
     window.addEventListener('resize', handleResize)
 
+    /* ── Visibility Observer to save GPU/CPU ── */
+    let isVisible = true
+    const heroEl = document.getElementById('hero')
+    const heroObserver = new IntersectionObserver(([entry]) => {
+      isVisible = entry.isIntersecting
+    }, { threshold: 0.05 })
+    if (heroEl) heroObserver.observe(heroEl)
+
     /* ── Animation Loop ── */
     let animId
     const clock = new THREE.Clock()
     const animate = () => {
       animId = requestAnimationFrame(animate)
+      if (!isVisible) return
+
       const t = clock.getElapsedTime()
 
-      shapes.forEach((mesh, i) => {
+      shapes.forEach((mesh) => {
         mesh.rotation.x += mesh.userData.speed.x
         mesh.rotation.y += mesh.userData.speed.y
         mesh.rotation.z += mesh.userData.speed.z
@@ -110,6 +120,7 @@ export default function Hero() {
       cancelAnimationFrame(animId)
       window.removeEventListener('mousemove', handleMouse)
       window.removeEventListener('resize', handleResize)
+      if (heroEl) heroObserver.disconnect()
       renderer.dispose()
     }
   }, [])

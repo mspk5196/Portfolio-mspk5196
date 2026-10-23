@@ -4,7 +4,6 @@ import { skillsCategories } from '../data'
 function SkillCard({ category, icon, items, index }) {
   const ref = useRef(null)
   const [active, setActive] = useState(false)
-  const [tilt, setTilt] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
     const el = ref.current
@@ -16,33 +15,19 @@ function SkillCard({ category, icon, items, index }) {
           obs.unobserve(el)
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     )
     obs.observe(el)
     return () => obs.disconnect()
   }, [])
-
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect()
-    const cx = rect.left + rect.width / 2
-    const cy = rect.top + rect.height / 2
-    const dx = (e.clientX - cx) / (rect.width / 2)
-    const dy = (e.clientY - cy) / (rect.height / 2)
-    setTilt({ x: dy * -8, y: dx * 8 })
-  }
-
-  const handleMouseLeave = () => setTilt({ x: 0, y: 0 })
 
   return (
     <div
       ref={ref}
       className={`skill-card ${active ? 'visible' : ''}`}
       style={{
-        transitionDelay: `${index * 50}ms`,
-        transform: `perspective(800px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
+        transitionDelay: active ? '0ms' : `${index * 40}ms`,
       }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
     >
       <div className="skill-card-head">
         <span className="skill-icon">{icon}</span>

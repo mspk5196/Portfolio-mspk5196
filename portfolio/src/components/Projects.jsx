@@ -5,7 +5,6 @@ import { ExternalLinkIcon } from './icons'
 function ProjectCard({ project, index }) {
   const ref = useRef(null)
   const [vis, setVis] = useState(false)
-  const [tilt, setTilt] = useState({ x: 0, y: 0 })
   const [expanded, setExpanded] = useState(project.featured)
 
   useEffect(() => {
@@ -24,25 +23,13 @@ function ProjectCard({ project, index }) {
     return () => obs.disconnect()
   }, [])
 
-  const onMove = (e) => {
-    const r = e.currentTarget.getBoundingClientRect()
-    const dx = (e.clientX - r.left - r.width / 2) / (r.width / 2)
-    const dy = (e.clientY - r.top - r.height / 2) / (r.height / 2)
-    setTilt({ x: dy * -5, y: dx * 5 })
-  }
-
-  const onLeave = () => setTilt({ x: 0, y: 0 })
-
   return (
     <article
       ref={ref}
       className={`project-card ${project.featured ? 'featured' : ''} ${vis ? 'visible' : ''}`}
       style={{
-        transitionDelay: `${index * 80}ms`,
-        transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
+        transitionDelay: vis ? '0ms' : `${index * 50}ms`,
       }}
-      onMouseMove={onMove}
-      onMouseLeave={onLeave}
     >
       <div className="proj-card-top">
         <div className="proj-badge-row">
